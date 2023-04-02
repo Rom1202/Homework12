@@ -1,21 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        String nameJohn = "John";
-        int ageJohn = 13;
-        String nameSarah = "Sarah";
-        int aheSarah = 30;
+    Aurhor pushkin = new Aurhor("Александр", "Пушкин");
+    Aurhor lermontov = new Aurhor("Михаил", "Лермонтов");
 
-        String[] names = {"John", "Sarah "};
-        int[] ages  = {13,30};
+    Book capitanDaughter =new Book("Капитанская дочка ", pushkin,1836);
+    Book demon = new Book("Демон", lermontov,1839);
+        System.out.println("Заголовок книги " + capitanDaughter.getTitle());
+        System.out.println("Год издание книги  " + capitanDaughter.getYear());
 
-        for (int i = 0; i < names.length;i++) {
-            System.out.println("Имя - " + names[i] + " Возвраст -  " + ages[i]);
-        }
-        Person sarah =  new Person("Sarah",30);
-        System.out.println("sarah.name = " + sarah.getName());
-        System.out.println("sarah.age = " + sarah.getAge());
-        sarah.setAge(31);
-        System.out.println("sarah.getAge() = " + sarah.getAge());
-        Person john = new Person("John",13);
+        capitanDaughter.setYear(1841);
+        System.out.println("Год переиздания книги  " + capitanDaughter.getYear());
     }
 }
